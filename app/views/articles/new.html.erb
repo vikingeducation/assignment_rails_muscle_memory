@@ -2,14 +2,10 @@
   Create a new article.
 </h1>
 
-<form>
+<%= form_for @article do |f| %>
   Title:<br>
-  <input type="text" name="title"><br>
+  <%= f.text_field :title %><br>
   Body:<br>
-  <input type="text-area" name="body">
-  <input type="submit" value="Submit">
-</form>
-
-<input  type="hidden"
-        name="authenticity_token"
-        value="<%= form_authenticity_token %>" >
+  <%= f.text_area :body %><br>
+  <%= f.submit "Create" %>
+<% end %>
