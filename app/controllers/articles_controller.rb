@@ -3,9 +3,9 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
-  # def show
-    # @article = Article
-  # end
+  def show
+    @article = Article.find(params[:id])
+  end
 
   def create
     @article = Article.new(whitelisted_article_params)
