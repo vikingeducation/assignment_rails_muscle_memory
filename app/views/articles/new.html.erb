@@ -1,0 +1,15 @@
+<h1>
+  Create a new article.
+</h1>
+
+<form>
+  Title:<br>
+  <input type="text" name="title"><br>
+  Body:<br>
+  <input type="text-area" name="body">
+  <input type="submit" value="Submit">
+</form>
+
+<input  type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>" >
