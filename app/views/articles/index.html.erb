@@ -1,0 +1,10 @@
+<h1>Index</h1>
+
+<ul>
+  <% @articles.each_with_index do |article, index| %>
+  <li><%= article.title %></li>
+  <li><%= article.body %></li>
+  <li><%= link_to "article", article_path(article[:id]) %></li>
+  <br>
+  <% end %>
+</ul>
