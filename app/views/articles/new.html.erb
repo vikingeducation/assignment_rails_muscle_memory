@@ -1,8 +1,8 @@
 <h1>New Article</h1>
 
-<form action=articles_path method="GET">
+<form method='post' action='/articles/'>
   Content:<br>
   <input type="text" name="content">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="submit" value="Submit"
+  <input type="submit" value="Submit">
 </form>
