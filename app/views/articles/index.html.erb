@@ -1,9 +1,8 @@
 <h1>Create an article</h1>
 
-<form>
-Article content:<br />
-<input  type="hidden" 
-name="authenticity_token" 
-value="<%= form_authenticity_token %>">
-<input type="text" name="body" placeholder="content goes here...">
-</form>
+
+<%= form_tag("/article", method: "post") do %>
+  <%= label_tag(:q, "Article content:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Create") %>
+<% end %>
