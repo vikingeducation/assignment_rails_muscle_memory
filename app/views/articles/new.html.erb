@@ -1,7 +1,7 @@
-<form action="new_article_path" method="post">
+<form action=<%= articles_path %> method="post">
 
-  <input type="text" name="title">
-  <input type="text" name="body">
+  <input type="text" name="article[title]">
+  <input type="text" name="article[body]">
 
   <input type="submit" value="Post Article!">
 
