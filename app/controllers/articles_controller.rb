@@ -4,14 +4,14 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(post_params)
+    @article = Article.new(whitelisted_article_params)
     @article.save
     redirect_to root_path
   end
 
   private
 
-  def post_params
-    params.require(:articles).permit(:title, :body)
+  def whitelisted_article_params
+    params.require(:article).permit(:title, :body)
   end
 end
