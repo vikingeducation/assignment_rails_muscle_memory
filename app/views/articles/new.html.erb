@@ -1,8 +1,3 @@
 <form action=<%=articles_path%> method="post">
-  <input type="text" name="article[title]" placeholder="Title">
-  <textarea name="article[body]" placeholder="Post Content"></textarea>
-  <input  type="hidden"
-    name="authenticity_token"
-    value="<%= form_authenticity_token %>">
-  <input type="submit" value="click me">
+<%= render "form" %>
 </form>
