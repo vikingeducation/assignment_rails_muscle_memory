@@ -1,2 +1,4 @@
 <%= @article.title %>
 <%= @article.body %>
+<%= link_to "edit", edit_article_path(@article)%>
+<%= link_to "destroy", article_path(@article), method: "delete" %>
