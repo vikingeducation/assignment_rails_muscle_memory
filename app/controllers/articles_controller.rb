@@ -28,9 +28,18 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     #@article.title, @article.body = @article(whitelisted_article_params)
-    @article.update(whitelisted_article_params)
-    @article.save
-    redirect_to article_path
+    if @article.update(whitelisted_article_params)
+    # @article.save
+      redirect_to article_path(@article.id) # @article
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to articles_path
   end
 
   private
