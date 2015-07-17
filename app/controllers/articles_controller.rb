@@ -26,9 +26,7 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    @article.title = params[:title]
-    @article.body = params[:body]
-    @article.save
+    @article.update(allowed_params)
     redirect_to article_path(@article.id)
   end
 
