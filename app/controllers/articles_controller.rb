@@ -18,6 +18,10 @@ class ArticlesController < ApplicationController
 
   end
 
+  def index
+    @articles = Article.all
+  end
+
   private
 
   def whitelisted_article_params
