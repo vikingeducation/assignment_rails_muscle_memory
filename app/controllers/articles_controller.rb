@@ -20,4 +20,16 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    @article.title = params[:title]
+    @article.body = params[:body]
+    @article.save
+    redirect_to article_path(@article.id)
+  end
+
 end
