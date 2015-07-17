@@ -9,6 +9,9 @@
 <body>
 
 <%= render :partial => 'shared/navbar' %>
+<% if flash[:success] %>
+   <div class="success"><%= flash[:success] %></div>
+<% end %>
 <%= yield %>
 
 </body>
