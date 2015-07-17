@@ -5,8 +5,17 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(whitelisted_article_params)
-    @article.save
-    redirect_to root_path
+    if @article.save
+      flash[:success]="article created!"
+      redirect_to article_path(@article.id)
+    else
+      render :new
+    end
+  end
+
+  def show
+    @article = Article.find(params[:id])
+
   end
 
   private
