@@ -1,0 +1,12 @@
+
+  <input type="text" name="article[title]" placeholder="Title" value=<%= @article.title if @article %>>
+  <textarea name="article[body]" placeholder="Post Content">
+    <% if @article %>
+      <%= @article.body%>
+    <% end %>
+
+  </textarea>
+  <input  type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+  <input type="submit" value="click me">
