@@ -1,0 +1,17 @@
+<br>
+<form action=<%= articles_path %> method="post">
+
+  <input type="text" name="article[title]">
+  <br><br>
+
+  <textarea name="article[body]" rows="4" cols="50"></textarea>
+  <br><br>
+
+  <input type="submit" value="Post Article!">
+
+
+  <input  type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+
+</form>
