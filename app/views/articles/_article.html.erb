@@ -1,0 +1,12 @@
+<li>
+	<div>
+		<h1>
+			<%= link_to(article.title, article_path(article.id)) %>
+		</h1>
+		<p>
+			<%= article.body[0..100] %>
+			<%= '...' if article.body.length > 100 %>
+			<%= link_to('[Read more]', article_path(article.id)) %>
+		</p>
+	</div>
+</li>

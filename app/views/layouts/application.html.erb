@@ -7,8 +7,9 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
-
-	<%= yield %>
-
+		<h1>Assignment Rails Muscle Memory</h1>
+		<%= render :partial => 'shared/flash' %>
+		<%= render :partial => 'shared/nav' %>
+		<%= yield %>
 	</body>
 </html>
