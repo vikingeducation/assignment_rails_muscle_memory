@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
 
-  
   def show
     @article = Article.find(params[:id])
   end
@@ -12,7 +11,7 @@ class ArticlesController < ApplicationController
 
 
   def new
-    
+    # not using form_for, so dont need empty Article here
   end
 
 
@@ -52,6 +51,7 @@ class ArticlesController < ApplicationController
 
 
   private
+
 
   def whitelisted_params
     params.require(:article).permit(:title, :body)
