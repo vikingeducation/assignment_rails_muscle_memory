@@ -1,6 +1,12 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do 
 
-  resources :articles, only: [ :new, :create ]
+  resources :articles, :only => [:show, :index, :new, :create]
+
   root to: 'articles#new'
 
+  # get   '/articles'     => 'articles#index'
+  # get   '/articles/:id' => 'articles#show'
+  # get   '/articles/new' => 'articles#new'
+  # post  '/articles'     => 'articles#create'
+  
 end
