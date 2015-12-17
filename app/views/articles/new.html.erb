@@ -1,17 +1,16 @@
 <h1>New Article</h1>
 <p>
-  <form type="hidden" name="authenticity_token"
-    value="<%= form_authenticity_token %>" action="<%= articles_path(@article) %>" method="post">
+  <%= form_for(@article) do |f| %>
     <p>
-      <label>Title</label><br>
-      <input type="text" name="title">
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
     </p>
     <p>
-      <label>Content</label><br>
-      <textarea name="body"></textarea>
+      <%= f.label :body, "Content" %><br>
+      <%= f.text_area :body %>
     </p>
     <p>
-      <input type="submit" value="Create Article">
+      <%= f.submit "Create Article" %>
     </p>
-  </form>
+  <% end %>
 </p>
