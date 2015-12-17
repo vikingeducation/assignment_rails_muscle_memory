@@ -1,0 +1,17 @@
+<h1>New Article</h1>
+<p>
+  <form type="hidden" name="authenticity_token"
+    value="<%= form_authenticity_token %>" action="<%= articles_path(@article) %>" method="post">
+    <p>
+      <label>Title</label><br>
+      <input type="text" name="title">
+    </p>
+    <p>
+      <label>Content</label><br>
+      <textarea name="body"></textarea>
+    </p>
+    <p>
+      <input type="submit" value="Create Article">
+    </p>
+  </form>
+</p>
