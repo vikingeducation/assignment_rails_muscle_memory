@@ -1,5 +1,13 @@
 <h1>All Articles</h1>
 
-<ul>
-  <%= render @articles %>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <td>Title</td>
+      <td colspan="2">Actions</td>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @articles %>
+  </tbody>
+</table>
