@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :shmarticles
   get 'articles/new'
 
   root 'articles#new'

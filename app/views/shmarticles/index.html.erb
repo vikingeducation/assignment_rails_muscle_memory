@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Shmarticles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shmarticles.each do |shmarticle| %>
+      <tr>
+        <td><%= shmarticle.title %></td>
+        <td><%= shmarticle.body %></td>
+        <td><%= link_to 'Show', shmarticle %></td>
+        <td><%= link_to 'Edit', edit_shmarticle_path(shmarticle) %></td>
+        <td><%= link_to 'Destroy', shmarticle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shmarticle', new_shmarticle_path %>
