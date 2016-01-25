@@ -7,10 +7,13 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(whitelisted_post_params)
     if @article.save
-      redirect_to :show
+      redirect_to article_path(@article)
     end
   end
 
+  def show
+    @article = Article.find(params[:id])
+  end
 
   private
 
