@@ -1,0 +1,13 @@
+<h1>Articles New</h1>
+
+
+<form method="post" action="<%= articles_path %>">
+<input  type="hidden" 
+    name="authenticity_token" 
+    value="<%= form_authenticity_token %>">
+
+
+ <input type="text" name= "article[title]" >
+ <textarea name="article[body]" ></textarea>
+ <button type="submit">Submit</button>
+</form>
