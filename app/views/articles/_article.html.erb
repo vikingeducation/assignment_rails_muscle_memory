@@ -1,4 +1,6 @@
 <li>
   <a href="/articles/<%=article.id%>"> <%= "#{article.title}" %> </a></br>
   <a href="/articles/<%=article.id%>"> <%= "#{article.id}" %> </a>
+  <%= link_to "Edit", edit_article_path(article.id) %>
+  <%= link_to "Delete", article_path(article.id), method: 'delete' %>
 </li>

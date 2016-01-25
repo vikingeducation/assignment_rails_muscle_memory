@@ -1,11 +1,11 @@
 <h3>Update Article #<%= @article.id %>
 
-<form action="/articles" method="post">
+<form action="/articles/<%= @article.id %>" method="post">
   <label for="title">Title</label>
-  <input type="text" name="article[title]">
+  <input type="text" name="article[title]" value="<%=@article.title%>"></input>
 
   <label for="body">Body</label>
-  <input type="textarea" name="article[body]" rows="4" cols="50">
+  <input type="textarea" name="article[body]" rows="4" cols="50" value="<%=@article.body%>"></input>
 
   <input type="submit">
 
