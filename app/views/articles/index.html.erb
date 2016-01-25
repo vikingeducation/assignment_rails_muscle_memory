@@ -1,2 +1,11 @@
 
 <h4>check this out<h4>
+<h4>All Articles</h4>
+
+<ul id="articles">
+  <% @articles.each do |article| %>
+    <li>
+        <%= link_to article.title, article_path(article) %>
+    </li>
+  <% end %>
+</ul>
