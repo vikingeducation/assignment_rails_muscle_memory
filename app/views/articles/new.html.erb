@@ -1,6 +1,13 @@
 <h1>Articles#new</h1>
-<p>Find me in app/views/articles/new.html.erb</p>
 
+
+<form method="post" action="<%= articles_path %>">
 <input  type="hidden" 
     name="authenticity_token" 
     value="<%= form_authenticity_token %>">
+
+
+ <input type="text" name= "article[title]" >
+ <textarea name="article[body]" ></textarea>
+ <button type="submit">Submit</button>
+</form>
