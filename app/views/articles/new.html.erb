@@ -1,8 +1,9 @@
 
-<form method="get" action="/new">
+<form method="get" action="/articles/:id">
   <input type="text" name="title">
   <input type="textarea" name="body">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="Submit">
 </form>
 
 
