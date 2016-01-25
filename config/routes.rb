@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :schmarticles
   get 'articles/new'
 
-  resources :articles, only: [:new, :create, :show, :index, :edit]
+  resources :articles
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
