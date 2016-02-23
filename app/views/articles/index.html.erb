@@ -1,0 +1,10 @@
+<h3>All Articles</h3>
+
+<ul>
+	<% @articles.each do |article| %>
+		<%= link_to "#{article.id} - #{article.title}", article %>
+		<%= link_to "edit", "articles/#{article.id}/edit" %>
+		<%= link_to "delete", article, :method => :delete %>
+    <br>
+  <% end %>
+</ul>

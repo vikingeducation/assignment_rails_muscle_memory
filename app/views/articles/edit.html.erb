@@ -1,0 +1,17 @@
+<h3>
+	Update Article "<%= @article.title %>"
+</h3>
+
+<form method="post" action="/articles/<%= @article.id %>">
+	<input  type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input name="_method" type="hidden" value="patch" />
+	Title
+	<br>
+	<input type="text" name="title" value="<%= @article.title %>" >	<br>
+	Body
+	<br>
+	<input type="text" name="body" value="<%= @article.body %>">
+	<br>
+	<br>
+  <input type="submit" value="Update">
+</form>
