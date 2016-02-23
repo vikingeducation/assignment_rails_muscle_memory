@@ -2,10 +2,8 @@
 	Create New Article
 </h3>
 
-<form method="post" action="articles">
-	   <input  type="hidden" 
-    name="authenticity_token" 
-    value="<%= form_authenticity_token %>">
+<form method="post" action="/articles">
+	<input  type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 	Title
 	<br>
 	<input type="text" name="title">
