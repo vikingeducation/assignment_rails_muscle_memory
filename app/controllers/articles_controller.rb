@@ -39,4 +39,26 @@ class ArticlesController < ApplicationController
     @article=Article.find(params[:id])
   end
 
+=begin
+  The "Index" Action
+
+  The "Index" action is meant to display a listing of all the resources of the specified type. In our case, that means each of the articles.
+
+  1. Set up the route to handle the index action. At this point, it probably makes sense to begin utilizing the resources helper (though don't create routes you don't need! rake routes to verify!). (Done)
+
+  2. Set up the index action of your controller to retrieve all Articles (Article.all) and pass them off to a view template. (DONE)
+
+  3. Build the view template to display a list or table of each article, including its ID field and Title. Both should be links to that particular article. (DONE)
+
+  4. Add the index to the navbar. (Done)
+
+  5. Verify that you can click through the articles and create new ones. (DONE)
+
+  6. Git commit!
+=end
+
+  def index
+    @articles = Article.all
+  end
+
 end

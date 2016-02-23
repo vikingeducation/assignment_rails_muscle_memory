@@ -1,0 +1,8 @@
+<h3>All Articles</h3>
+
+<ul>
+	<% @articles.each do |article| %>
+		<%= link_to "#{article.id} - #{article.title}", article %>
+    <br>
+  <% end %>
+</ul>
