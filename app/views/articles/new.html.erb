@@ -1,9 +1,9 @@
-<form action= "/articles" method= "post">
+<form action= "<%= articles_path %>" method= "post">
 	<label for= "title">Title</label>
-	<input type= "text" name= "title">
+	<input type= "text" name= "article[title]">
 
-	<labelfor= "body">Body</label>
-	<input type= "textarea" name= "body">
+	<label for= "body">Body</label>
+	<input type= "textarea" name= "article[body]">
 	<input type= "submit" value= "Publish">
 
 	<input type= "hidden" 
