@@ -1,0 +1,12 @@
+<form action= "<%= articles_path %>" method= "post">
+	<label for= "title">Title</label>
+	<input type= "text" name= "article[title]">
+
+	<label for= "body">Body</label>
+	<input type= "textarea" name= "article[body]">
+	<input type= "submit" value= "Publish">
+
+	<input type= "hidden" 
+		   name= "authenticity_token" 
+		   value= "<%= form_authenticity_token %>">
+</form>
