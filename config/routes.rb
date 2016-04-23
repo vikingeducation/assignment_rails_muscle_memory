@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :schmarticles
   root 'articles#new'
 
   resources :articles, :only => [:new, :create, :show, :index, :edit, :update, :destroy]
