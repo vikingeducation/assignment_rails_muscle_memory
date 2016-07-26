@@ -1,0 +1,19 @@
+<%
+=begin%>
+<%= form_for @article do |article| %>
+  <%= article.label :title %>
+  <%= article.text_field :title %></br>
+  <%= article.label :body %>
+  <%= article.text_field :body %></br>
+  <%= article.submit "submit" %>
+<% end %>
+<%
+=end %>
+<form accept-charset="UTF-8" action="/articles" method="post">
+  <input  type="hidden" 
+    name="authenticity_token" 
+    value="<%= form_authenticity_token %>">
+  <input type="text" name= "article[title]">
+  <input type="text" name= "article[body]">
+  <input type="submit" name="Submit">
+</form>
