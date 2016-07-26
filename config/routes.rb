@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'articles#index'
-  resources :articles, :except => [:update, :destroy, :create]
+  resources :articles, :except => [:destroy]
 
 
   

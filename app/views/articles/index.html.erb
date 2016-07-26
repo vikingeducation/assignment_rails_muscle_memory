@@ -2,9 +2,10 @@
 
 <% @articles.each do |article| %>
 <ul>
-  <li> <%= link_to article.title, article_path(article)> </li>
-  <li> <%= article.id> </li>
-  <li> <%= article.body> </li>
-</li>
+  <li> <%= link_to article.title, article_path(article) %> </li>
+  <li> <%= link_to article.id, article_path(article) %> </li>
+
+</ul>
+<%= link_to "edit this article", edit_article_path(article) %>
 
 <% end %>
