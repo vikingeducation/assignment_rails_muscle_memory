@@ -1,7 +1,7 @@
 
 <form method="post" action="/articles" >
   <input  type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  Title: <input name="article[title]" type="text" placeholder="Title">
-  Body: <textarea name="article[body]" placeholder="Your post..."></textarea>
+  Title: <input name="article[title]" type="text" placeholder="Title" required>
+  Body: <textarea name="article[body]" placeholder="Your post..." required></textarea>
   <input type="submit" value="Submit Article">
 </form>
