@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  #root to: 'articles#index'
+  # resources :articles
+  root to: 'articles#index'
   get 'new' => 'articles#new'
 
-  post 'create' =>  'articles#create'
+  post 'articles/new' =>  'articles#create'
+  get 'articles/:id' => 'articles#show', as: 'article'
 
 end
