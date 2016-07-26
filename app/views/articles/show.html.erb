@@ -5,3 +5,5 @@
 <p>
   <%= @article.body %>
 </p>
+<%= link_to "Edit this article", edit_article_path(@article)%> 
+<%= link_to "delete this article", article_path(@article), method: "delete"%>
