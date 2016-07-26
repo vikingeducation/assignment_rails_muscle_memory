@@ -35,5 +35,9 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title,:body)
   end
 
+  def index
+    @articles = Article.all
+  end
+
 
 end
