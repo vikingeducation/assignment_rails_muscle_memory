@@ -32,13 +32,24 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
 
     if @article.update(article_params)
-      flash[:success] = "Article created!"
+      flash[:success] = "Article updated!"
       redirect_to article_path(@article)
     else
-      flash[:error] = "Could not create article"
+      flash[:error] = "Could not edit article"
       render :edit
     end
   end
+
+  def destroy
+    @article = Article.find(params[:id])
+    if @article.destroy
+      flash[:success] = "Article deleted!"
+    else
+      flash[:error] = "Could not delete article"
+    end
+    redirect_to articles_path
+  end
+
 
   private
 
