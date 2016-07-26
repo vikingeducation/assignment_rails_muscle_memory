@@ -16,7 +16,11 @@ class ArticlesController < ApplicationController
   end
 
   def index 
-    @article = Article.all
+    @articles = Article.all
 
+  end
+
+  def edit
+    @article = Article.find(params[:id])
   end
 end
