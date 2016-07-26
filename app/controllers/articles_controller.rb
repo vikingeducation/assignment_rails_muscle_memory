@@ -29,7 +29,15 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    
+    @article = Article.find(params[:id])
+
+    if @article.update(article_params)
+      flash[:success] = "Article created!"
+      redirect_to article_path(@article)
+    else
+      flash[:error] = "Could not create article"
+      render :edit
+    end
   end
 
   private
