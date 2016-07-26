@@ -1,0 +1,10 @@
+<h1>Welcome to your form</h1>
+
+<form action="<%= articles_path %>" method="post">
+  <input type="text" name="article[title]" />
+  <input type="text" name="article[body]" />
+  <input  type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+  <input type="submit"/>
+</form>
