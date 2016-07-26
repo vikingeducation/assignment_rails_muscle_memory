@@ -1,5 +1,5 @@
 <ul>
-<%= @articles.each do |article| %>
-<li>article.id <%= link_to article.title, article %></li>
+<% @articles.each do |article| %>
+<li><%= link_to article.id.to_s + ": " + article.title, article %></li>
 <% end %>
 </ul>
