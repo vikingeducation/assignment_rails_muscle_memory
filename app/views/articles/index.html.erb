@@ -1,5 +1,5 @@
 <ul>
 <% @articles.each do |article| %>
-<li><%= link_to article.id.to_s + ": " + article.title, article %></li>
+<li><%= link_to article.id.to_s + ": " + article.title, article %> <%= link_to "delete", article, method: "delete" %></li>
 <% end %>
 </ul>
