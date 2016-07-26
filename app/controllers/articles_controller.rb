@@ -7,6 +7,11 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def edit
+    @article = Article.find(params[:id])
+
+  end
+
   def create
     @article = Article.new(article_params)
     if @article.save
@@ -22,6 +27,6 @@ class ArticlesController < ApplicationController
 
   private
     def article_params
-      params.require(:article).permit(:title, :body)
+      params.permit(:title, :body)
     end
 end
