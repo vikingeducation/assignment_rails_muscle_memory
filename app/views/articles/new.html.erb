@@ -1,8 +1,8 @@
-<form action='<% articles_new_path %>' method="post">
+<form action="<%= articles_path %>" method="post">
   <lable>Title</lable>
-  <input type="text" name="article['title']">
+  <input type="text" name="article[title]">
   <lable>Body</lable>
-  <input type="body" name="article['body']">
+  <input type="body" name="article[body]">
   <input  type="hidden"
           name="authenticity_token"
           value="<%= form_authenticity_token %>">
