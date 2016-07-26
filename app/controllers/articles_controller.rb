@@ -28,9 +28,8 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    @article.title = whitelisted_article_params[:title]
-    @article.body = whitelisted_article_params[:body]
-    if @article.save
+
+    if @article.update(whitelisted_article_params)
       redirect_to article_path(@article.id)
     else
       render :edit
@@ -38,6 +37,15 @@ class ArticlesController < ApplicationController
 
   end
 
+  def destroy
+    if Article.find(params[:id]).destroy
+      redirect_to articles_path
+    else
+      flash[:error] = "Could not delete that post!"
+      render :show
+    end
+
+  end
 
   private
 
