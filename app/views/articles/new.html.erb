@@ -1,0 +1,10 @@
+<form action='<% article_new_path %>' method="post">
+  <lable>Title</lable>
+  <input type="text" name="title">
+  <lable>Body</lable>
+  <input type="body" name="body">
+  <input  type="hidden"
+          name="authenticity_token"
+          value="<%= form_authenticity_token %>">
+  <input type="submit" value="Submit">
+</form>
