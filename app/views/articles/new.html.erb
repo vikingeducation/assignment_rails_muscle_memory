@@ -1,8 +1,10 @@
-<form action='/new' method='post'>
-  <input type='text' placeholder='field' name='form_field'>
-
-</form>
-
-<input  type="hidden" 
+<form action='create' method='post'>
+  <input type='text' placeholder='title' name='title'>
+  <br>
+  <input type='text' placeholder='body' name='body'>
+  <input type='submit' value='Submit'>
+  <input  type="hidden" 
     name="authenticity_token" 
     value="<%= form_authenticity_token %>">
+</form>
+
