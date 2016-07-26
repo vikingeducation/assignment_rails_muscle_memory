@@ -1,0 +1,13 @@
+<nav>
+  <ul>
+    <li>
+      <%= link_to "home", root_path %>
+    </li>
+    <li>
+      <%= link_to "show", article_path(Article.first) %>
+    </li>
+    <li>
+      <%= link_to "index", articles_path %>
+    </li>
+  </ul>
+</nav>
