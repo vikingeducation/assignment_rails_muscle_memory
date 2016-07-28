@@ -2,3 +2,5 @@
 
 <h2><%= @article.title %></h2>
 <p><%= @article.body %></p>
+<li><%= link_to "update this article", edit_article_path(@article)%></li>
+<li>  <%= link_to "delete", article_path(@article), method: "delete" %></li>
