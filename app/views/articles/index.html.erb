@@ -1,0 +1,9 @@
+<h2>The articles presently available to you:</h2>
+<ul>
+  <% @articles.each do |article| %>
+  <li><%= link_to article[:id], article_path(article)%>:
+    <%= link_to article[:title], article_path(article[:id])%>,
+    <%= link_to "update this article", edit_article_path(article)%>
+    <%= link_to "delete", article_path(article), method: "delete" %></li>
+    <%end%>
+  </ul>
