@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   
-  resources :articles, only: [:new, :create, :show, :index]
+  resources :articles, only: [:new, :create, :show, :index, :edit, :update, :destroy]
   root to: 'articles#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
