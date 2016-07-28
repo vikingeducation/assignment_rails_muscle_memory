@@ -1,0 +1,16 @@
+<!-- <form accept-charset="UTF-8" action="<%= articles_path %>" method="post">
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="text" name="article[title]" placeholder="title">
+  <input type="body" name="article[body]" placeholder="body">
+  <input type="submit">
+
+</form> -->
+
+
+<%= form_for @article do |f| %>
+  Title: <%= f.text_field :title %>
+  Body: <%= f.text_field :body, placeholder: "body" %>
+  <%= f.submit %>
+
+<% end %>
