@@ -1,0 +1,8 @@
+<form action="/articles" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>title: <br />
+    <input type="text" name="title" /></p>
+  <p>body: <br />
+    <input type="text" name="body" /></p>
+  <input type="submit" value="Submit" />
+</form>
