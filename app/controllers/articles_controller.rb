@@ -2,7 +2,11 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
   end
-  
+
+  def edit
+    @article = Article.find(params[:id])
+  end
+
   def new
   end
 
@@ -18,5 +22,15 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update({:title => params[:title], :body => params[:body]})
+      true
+      redirect_to article_path(@article.id)
+    else
+      false
+    end
   end
 end
