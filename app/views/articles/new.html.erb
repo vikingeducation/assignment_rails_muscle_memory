@@ -1,0 +1,10 @@
+<form action="articles" method="post">
+  Title:<br>
+  <input type="text" name="title"><br>
+  Body:<br>
+  <textarea rows="4" cols="50" name="body"></textarea><br><br>
+  <input  type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+  <input type="submit" value="Submit">
+</form>
