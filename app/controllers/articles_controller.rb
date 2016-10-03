@@ -36,6 +36,11 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def destroy
+    Article.find(params[:id]).destroy
+    redirect_to articles_path
+  end
+
   private
 
   def whitelisted_post_params
