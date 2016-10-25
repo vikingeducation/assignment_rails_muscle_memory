@@ -1,6 +1,4 @@
-// Place all the styles related to the articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
 * {
 
 	font-family: "Arial", "sans-serif";
@@ -15,3 +13,18 @@
 
 }
 
+.button {
+
+	background-color: #CCC;
+	text-decoration: none;
+	border-radius: 7px;
+	padding: 1px;
+	border: 1px solid black;
+
+}
+
+.button:hover {
+	background-color: black;
+	color: #CCC;
+
+}
