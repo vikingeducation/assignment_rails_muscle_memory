@@ -1,0 +1,23 @@
+<h1>All Articles</h1>
+
+
+<table id="articles">
+<% @articles.each do | article | %>
+	<tr>
+		<td>Title: <%= link_to article.title, article_path( article ) %>
+		</td>
+		<td>
+		ID:<%= article.id %>
+	  </td>
+	  <td>
+		<%= link_to "EDIT", edit_article_path( article ), class: "button" %>
+		</td>
+		<td>
+			<%= link_to 'DELETE', article_path(article ), method: 'delete', class: "button" %>
+		</td>
+	</tr>
+<% end %>
+</table>
+
+
+<%= link_to "Create Article", new_article_path, class: "button" %>
