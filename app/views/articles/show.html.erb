@@ -1,8 +1,13 @@
-<h1>Show Article</h1>
-<p>
-<%= @article.title %>
-</p>
+<h1><%= @article.title %></h1>
 
 <p>
 	<%= @article.body %>
 </p>
+
+
+<p>
+
+	<%= link_to 'DELETE', article_path( @article ), method: 'delete' %>
+
+</p>
+
