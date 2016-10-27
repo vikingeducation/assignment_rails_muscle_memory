@@ -1,1 +1,7 @@
-<input  type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<%= form_for @article do |article| %>
+  <%= article.label :title %>
+  <%= article.text_field :title %></br>
+  <%= article.label :body %>
+  <%= article.text_field :body %></br>
+  <%= article.submit %>
+<% end %>
