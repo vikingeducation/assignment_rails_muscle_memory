@@ -21,4 +21,28 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
   end
+
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      flash[:success] = "Success Article Update"
+      redirect_to article_path(@article)
+    else
+      flash[:error] = "Error with Update."
+    end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    if @article.destroy
+      flash[:success] = "Success Article Deleted"
+    else
+    end
+
+    redirect_to articles_path
+  end
 end
