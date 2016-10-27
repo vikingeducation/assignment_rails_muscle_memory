@@ -7,7 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<p><%= flash.notice %></p>
+<%= link_to "All Articles", articles_path %>
+<%= link_to "Create a New Article", new_article_path %>
 <%= yield %>
 
 </body>
