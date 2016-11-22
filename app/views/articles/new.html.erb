@@ -1,14 +1,15 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <form action="<%= create_article_path %>" method="post">
+        <form action="<%= articles_path %>" method="post">
           <label for="title">Title</label>
-          <input type="text" name="title">
+          <input type="text" name="article[title]">
           <label for="body">Body</label>
-          <input type="text" name="body">
+          <input type="text" name="article[body]">
           <input type="hidden"
                  name="authenticity_token"
                  value="<%= form_authenticity_token %>">
+          <input type="submit">
         </form>
       </div>
     </div>
