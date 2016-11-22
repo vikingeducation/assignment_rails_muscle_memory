@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
       redirect_to @article
     else
       flash.now[:error] = "You must include a title and body."
-      render 'new'
+      render :new
     end
   end
 
@@ -27,14 +27,24 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def destroy
+    @article = Article.find(params[:id])
+    if @article.destroy
+      flash[:success] = "Article deleted!"
+    else
+      flash[:error] = "Something went wrong."
+    end
+    redirect_to articles_path
+  end
+
   def update
     @article = Article.find(params[:id])
     if @article.update(article_params)
       flash[:success] = "Article updated."
-      redirect_to @article
+      redirect_to @article # clear out params
     else
       flash.now[:error] = "Could not update article."
-      render 'edit'
+      render :edit
     end
   end
 
