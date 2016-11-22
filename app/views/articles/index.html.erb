@@ -1,0 +1,7 @@
+<h1>All Articles!</h1>
+
+<% @articles.each do |article| %>
+  <%= article.id %> |
+  <a href="<%= article_path(article.id) %>"><%= article.title %></a>
+  <a href="<%= edit_article_path(article.id) %>">Edit Article</a><br>
+<% end %>
