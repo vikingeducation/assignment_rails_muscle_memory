@@ -7,10 +7,11 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
+      flash[:success] = "Article created."
       redirect_to @article
     else
       flash.now[:error] = "You must include a title and body."
-      render :new
+      render 'new'
     end
   end
 
@@ -24,6 +25,17 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      flash[:success] = "Article updated."
+      redirect_to @article
+    else
+      flash.now[:error] = "Could not update article."
+      render 'edit'
+    end
   end
 
   private
