@@ -25,6 +25,15 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(strong_params)
+      redirect_to @article
+    else
+      false
+    end
+  end
+
   private
 
     def strong_params
