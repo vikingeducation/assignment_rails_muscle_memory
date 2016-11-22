@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   root :to => 'articles#new'
   get '/new' => 'articles#new'
   post '/create' => 'articles#create'
+  get '/show' => 'articles#show'
 
 end

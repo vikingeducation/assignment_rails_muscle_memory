@@ -6,7 +6,16 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(strong_params)
-    @article.save
+    if @article.save
+      redirect_to show_path
+
+    else
+      false
+    end
+  end
+
+  def show
+    @article = Article.find(:id)
   end
 
   private
