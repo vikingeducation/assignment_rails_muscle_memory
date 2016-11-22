@@ -5,15 +5,12 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    if @article.save
-      redirect_to article_path(@article.id)
-    else
-      render :new
-    end
+    @article.save
+    redirect_to article_path(@article.id)
   end
 
   def show
-    @article = Article.find( params[:id] )
+    @article = Article.find_by_id( params[:id] ) #returns nill if nothing there
   end
 
   def index
@@ -21,16 +18,20 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Article.find(params[:id])
+    @article = Article.find_by_id(params[:id])
   end
 
   def update
-    @article = Article.find(params[:id])
-    if @article.update(article_params)
-      redirect_to article_path(@article.id)
-    else
-      render :edit
-    end
+    @article = Article.find_by_id(params[:id])
+    @article.update(article_params)
+    redirect_to article_path(@article.id)
+
+  end
+
+  def destroy
+    @article = Article.find_by_id(params[:id])
+    @article.destroy
+    redirect_to articles_path
   end
 
   private
