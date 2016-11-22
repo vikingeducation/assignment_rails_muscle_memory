@@ -1,0 +1,10 @@
+<h1>Update Article #<%= @article.id %></h1>
+
+<form action= "<%= article_path %>" method="post">
+  <input type="text" name="title" value="<%= @article.title %>"><br>
+  <textarea rows="12" cols="60" name="body"><%= @article.body %></textarea><br>
+  <input type="submit" value="Submit Article">
+  <input  type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input name="_method" type="hidden" value="patch" />
+</form>
+
