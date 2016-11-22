@@ -1,0 +1,8 @@
+
+<li style="margin: 0 0 10px 0; list-style: none">
+  <%= link_to article.title, article %><br />
+  <%= article.body %>
+  <%= link_to "edit article", edit_article_path(article) %>
+  <%= link_to "delete", article, method: :delete,
+  data: { confirm: "Delete post??" } %>
+</li>
