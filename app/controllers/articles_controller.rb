@@ -4,7 +4,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    Article.new(title: params[:title], body: params[:body])
+    article = Article.new(title: params[:title], body: params[:body])
+    article.save
   end
 
 end
