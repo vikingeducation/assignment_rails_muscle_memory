@@ -7,15 +7,14 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(strong_params)
     if @article.save
-      redirect_to show_path
-
+      redirect_to @article
     else
       false
     end
   end
 
   def show
-    @article = Article.find(:id)
+    @article = Article.find(params[:id])
   end
 
   private
