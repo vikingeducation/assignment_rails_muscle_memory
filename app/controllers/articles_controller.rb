@@ -4,6 +4,12 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def destroy
+    Article.find_by(id: params[:id]).destroy
+    flash[:success] = "Article deleted!"
+    redirect_to articles_url
+  end
+
   def create
     @article = Article.new(article_params)
     if @article.save
@@ -28,7 +34,15 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    @article = Article.find(params[:id])
 
+    if @article.update_attributes(article_params)
+      flash[:success] = "Article updated!"
+      redirect_to @article
+    else
+      flash[:error] = "Try that one more time"
+      render :edit
+    end
   end
 
   private
