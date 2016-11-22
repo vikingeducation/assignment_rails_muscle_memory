@@ -1,0 +1,5 @@
+<ul>
+  <% @articles.each do |article| %>
+    <li><%= link_to "#{article.id}: #{article.title}",  article %>; <%= link_to 'Edit Article', edit_article_path(article.id) %>; <%= link_to 'Delete Article', article, method: 'delete' %></li>
+  <% end %>
+</ul>
