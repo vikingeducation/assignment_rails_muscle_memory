@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :find_article, only: [:show, :edit, :update, :destroy]
 
   def create
     @article = Article.new(allowed_params)
@@ -10,24 +11,22 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.find(params[:id])
     @article.destroy
     redirect_to root_path
   end
 
   def edit
-    @article = Article.find(params[:id])
+
   end
 
   def index
-    @articles = Article.all()
+    @articles = Article.all
   end
 
   def new
   end
 
   def update
-    @article = Article.find(params[:id])
     if @article.update(allowed_params)
       redirect_to @article
     else
@@ -36,10 +35,13 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
   end
 
   private
+    def find_article
+      @article = Article.find(params[:id])
+    end
+
     def allowed_params
       params.require(:article).permit(:title, :body)
     end

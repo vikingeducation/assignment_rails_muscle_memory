@@ -2,6 +2,16 @@
     <div class="row">
       <div class="col-xs-12">
         <h1> Edit <%= @article.title %></h1>
+        <% if @article.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+            <ul>
+            <% @article.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
         <form action="<%= article_path %>" method="post">
           <label for="title">Title</label>
           <input type="text" name="article[title]" value="<%= @article.title %>">
@@ -17,4 +27,3 @@
       </div>
     </div>
   </div>
-

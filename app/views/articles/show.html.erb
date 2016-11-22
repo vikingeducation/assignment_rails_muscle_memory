@@ -7,6 +7,7 @@
         <label for="title">Body</label>
         <div><%= @article.body %></div>
         <%= link_to 'Edit Article', edit_article_path %>
+        <%= link_to 'Delete Article', article_path, method: :delete, data: { confirm: "Are you sure?" } %>
       </form>
     </div>
   </div>
