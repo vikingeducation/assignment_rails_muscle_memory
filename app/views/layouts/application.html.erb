@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AssignmentRailsMuscleMemory</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<p><%= flash.notice %></p>
+<%= link_to "All Articles", articles_path %>
+<%= link_to "Create a New Article", new_article_path %>
+<%= yield %>
+
+</body>
+</html>
