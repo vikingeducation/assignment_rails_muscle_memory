@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 
   #get '/articles/new' => "articles#new"
   #post '/articles/:id' => "articles#create"
-  #get '/articles/:id' => "articles#show"
+  #get '/articles/:id' => "articles#show" #BUT WHYD OEES THIS NOT FUSFJSLJWER WORK?!@!?@??!
 
 end
