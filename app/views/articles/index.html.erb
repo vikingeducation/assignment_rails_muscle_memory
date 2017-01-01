@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <td><b>ID</b></td>
+    <td><b>TITLE</b></td>
+  </tr>
+  <% @articles.each do |article| %>
+  <tr>
+    <td>
+      <%= link_to article.id, article_path(article) %>
+    </td>
+    <td>
+      <%= link_to article.title, article_path(article) %>
+    </td>
+  </tr>
+  <% end %>
+</table>
