@@ -1,8 +1,16 @@
 <h1>Create a new article!</h1>
 
-<form method="post" action=articles_path>
+<form method="post" action="/articles">
+<label>Title</label>
+<input type="text" name="title">
+<br>
 
-<input type="text" name="article">
+
+<label>Body</label>
+<input type="text" name="body">
+<br>
+
+
 <input type="submit" name="submit">
 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
   

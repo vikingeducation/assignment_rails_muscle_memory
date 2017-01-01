@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  root 'articles#new'
 
-  get "/articles" => "articles#new"
+  root to: "articles#new"
+
+  resources :articles
+
+  #get '/articles/new' => "articles#new"
+  #post '/articles/:id' => "articles#create"
+  #get '/articles/:id' => "articles#show"
+
 end
