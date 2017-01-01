@@ -1,13 +1,13 @@
 <h1>Create a new article!</h1>
 
-<form method="post" action="/articles">
+<form method="post" action="<%= articles_path %>">
 <label>Title</label>
-<input type="text" name="title">
+<input type="text" name="article[title]">
 <br>
 
 
 <label>Body</label>
-<input type="text" name="body">
+<input type="text" name="article[body]">
 <br>
 
 
