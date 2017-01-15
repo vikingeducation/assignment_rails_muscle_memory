@@ -1,0 +1,7 @@
+<h1>Showing Article</h1>
+
+<p>Title is <%= @article.title %></p><br><br>
+
+<p>Body is <%= @article.body %></p>
+
+<%= link_to "Delete", article_path(@article.id), method: "delete" %>
