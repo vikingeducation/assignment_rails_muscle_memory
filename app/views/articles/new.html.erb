@@ -1,0 +1,10 @@
+<h1> Create a new Article</h1>
+
+<input  type="hidden" 
+    name="authenticity_token" 
+    value="<%= form_authenticity_token %>">
+
+	<form action="/blackjack/stay" method="get">
+		<input type="textarea" value="" name="body">
+    	<input type="submit" value="Create" />
+	</form>
