@@ -1,0 +1,10 @@
+<h1> articles#edit --> edit.html.erb </h1>
+
+<form action="/articles" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="title">Title</label><br>
+  <input type="text" name="article[title]" id="title"><br>
+  <label for="body">Body</label><br>
+  <textarea rows="4" cols="50" name="article[body]" id="body"></textarea><br>
+  <button type="submit">Edit</button>
+</form>
