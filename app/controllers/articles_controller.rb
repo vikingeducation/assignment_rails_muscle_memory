@@ -24,4 +24,9 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     redirect_to article_path(@article) if @article.update({title: params[:title], body: params[:body]})
   end
+
+  def destroy
+    @article = Article.find(params[:id])
+    redirect_to articles_path if @article.destroy
+  end
 end
