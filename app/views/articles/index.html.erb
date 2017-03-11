@@ -3,8 +3,9 @@
 <h1>All Articles</h1>
 <ul>
 <% @article.each do |art| %>
- <li> <%= link_to "#{art.id} - #{art.title}", article_path(art.id), class: "inline_anchor" %>
-   <%= link_to "Edit", edit_article_path(art.id), class: "inline_anchor" %>
+ <li> <%= link_to "#{art.id} - #{art.title}", article_path(art.id) %>
+   <%= link_to "Edit", edit_article_path(art.id) %>
+   <%= link_to "Delete", article_path(art.id), method: "delete" %>
  </li>
 <% end %>
 </ul>

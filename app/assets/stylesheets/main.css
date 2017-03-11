@@ -11,7 +11,7 @@ nav li {
 }
 
 
-li a {
+nav li a {
     display: block;
     color: white;
     text-align: center;
@@ -19,7 +19,7 @@ li a {
     text-decoration: none;
 }
 
-li a.inline_anchor {
+li a {
     display: inline-block;
     color: white;
     text-align: center;
