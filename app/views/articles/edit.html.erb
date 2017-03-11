@@ -2,10 +2,10 @@
 
 <form action= "<%= article_path %>" method="post">
   Title:<br>
-  <input type="text" name="title" value="<%= @article.title %>">
+  <input type="text" name="article[title]" value="<%= @article.title %>">
   <br>
   Body:<br>
-  <textarea name="body" value="<%= @article.body %>" >
+  <textarea name="article[body]" value="<%= @article.body %>" >
   </textarea>
   <br>
   <br>
