@@ -19,6 +19,14 @@ li a {
     text-decoration: none;
 }
 
+li a.inline_anchor {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
 /* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: #111;
