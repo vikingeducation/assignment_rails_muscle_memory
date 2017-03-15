@@ -3,8 +3,17 @@ Rails.application.routes.draw do
 
   root to: "articles#new"
 
-  get "/article/new" => "articles#new"
-  post "/article" => "articles#create"
+  get "/articles" => "articles#index"
+  get "/articles/:id" => "articles#show"
+
+  get "/articles/new" => "articles#new"
+  post "/articles" => "articles#create"
+    # shouldn't it be: 
+    # post "/article/:id" => "articles#create" ?
+
+
+# resources :articles
+
 end
 
 # shouldn't it be singular ie "article" ?
