@@ -1,0 +1,12 @@
+<%# new.html.erb %>
+
+<h2>New article</h2>
+
+<form action="<%= article_path %>" method="post">
+  <input  type="hidden" 
+    name="authenticity_token" 
+    value="<%= form_authenticity_token %>">
+  <input name="name" type="text" placeholder="Name"><br>
+  <textarea name="body" placeholder="Text"></textarea>
+  <input type="submit" value="Submit!">
+</form>

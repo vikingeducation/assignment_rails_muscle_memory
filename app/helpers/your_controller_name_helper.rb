@@ -1,0 +1,2 @@
+module YourControllerNameHelper
+end

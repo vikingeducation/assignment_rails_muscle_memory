@@ -1,0 +1,8 @@
+<h1>Articles Index</h1>
+<% unless @articles.empty? %>
+	<ul>
+		<%= render @articles %>
+	</ul>
+<% else %>
+	<p>No articles yet! <%= link_to('Create one!', new_article_path) %></p>
+<% end %>

@@ -1,0 +1,22 @@
+<%# index.html.erb %>
+
+<% if @articles.empty? %>
+
+  <p>No articles yet...</p>
+
+<% else %>
+
+  <% @articles.each do |article| %>
+    <h2>Article <%= link_to "ID\##{article.id}", article_path(article)  %></h2>
+    <h3>Title: <%= link_to article.title, article %></h3>
+    <p><strong>Body:</strong> <%= article.body %></p>
+    <%= link_to('Edit', edit_article_path(article)) %>
+    <%= link_to('Delete', article_path(article), :method => :delete, :data => { :confirm => 'Are you sure?' }) %>
+    <hr>
+  <% end %>
+
+<% end %>
+
+
+
+
