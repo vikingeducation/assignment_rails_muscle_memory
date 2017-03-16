@@ -1,0 +1,16 @@
+<nav>
+	<ul>
+		<%
+		[
+			['Article Index', articles_path],
+			['New Article', new_article_path]
+		].each do |link|
+		title = link[0]
+		path = link[1]
+		%>
+		<li>
+			<%= link_to(title, path) %>
+		</li>
+		<% end %>
+	</ul>
+</nav>

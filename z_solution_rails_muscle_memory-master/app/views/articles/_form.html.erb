@@ -1,0 +1,13 @@
+<%# _form.html.erb %>
+
+<input  type="hidden" 
+  name="authenticity_token" 
+  value="<%= form_authenticity_token %>">
+
+<label for="title">Title Your Blog Post</label><br/>
+<input type="text" name="article[title]" value="<%= article.title %>"><br/>
+
+<label for="body">Say Brilliant Things</label><br/>
+<textarea name="article[body]"><%= article.body %></textarea><br/>
+
+

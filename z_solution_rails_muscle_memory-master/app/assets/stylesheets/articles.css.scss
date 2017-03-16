@@ -1,0 +1,39 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+
+// STYLES FOR horizontal NAVBAR SO I DONT HAVE TO USE BOOTSTRAP
+
+nav {
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+  }
+
+  li {
+      float: left;
+      padding: 30px;
+      background-color: #dddddd;
+  }
+
+  a {
+      font-size: 18px;
+      font-weight: bold;
+      display: block;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+  }
+}
+
+
+
+

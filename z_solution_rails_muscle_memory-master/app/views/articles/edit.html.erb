@@ -1,0 +1,11 @@
+<%# edit.html.erb %>
+
+<h1>THE BEST NEW ARTICLE FORM EVER</h1>
+<form action = "<%= article_path(@article) %>", method="POST">
+  <input name="_method" type="hidden" value="patch" />
+
+  <%= render :partial => 'form', :locals => { :article => @article } %>
+
+  <input type="submit" value="Update Article">
+</form>
+

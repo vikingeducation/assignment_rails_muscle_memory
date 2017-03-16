@@ -1,0 +1,11 @@
+<%# new.html.erb %>
+
+<h1>THE BEST NEW ARTICLE FORM EVER</h1>
+<form action = "<%= articles_path %>", method="POST">
+
+  <%= render :partial => 'form', :locals => { :article => @article } %>
+
+  <input type="submit" value="Create Article">
+</form>
+
+
