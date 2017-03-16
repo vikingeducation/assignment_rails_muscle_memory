@@ -2,11 +2,8 @@
 
 <h2>Article List</h2>
 
-<form action="<%= article_path %>" method="post">
-  <input  type="hidden" 
-    name="authenticity_token" 
-    value="<%= form_authenticity_token %>">
-  <input name="title" type="text" placeholder="Name"><br>
-  <textarea name="body" placeholder="Text"></textarea>
-  <input type="submit" value="Submit!">
-</form>
+<ul>
+  <%= render @articles %>
+</ul>
+
+

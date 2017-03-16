@@ -1,9 +1,10 @@
 <%# show.html.erb %>
 
 <h2>Article Title: <%= @article.title %></h2>
-<p><strong>Article Body:</strong></p><br>
-<p><strong>-------------</strong><br>
-<p><%= @article.body %></p>
+<p><strong>Article Body: </strong><%= @article.body %></p>
 
-
+<br>
+<li>
+  <%= link_to "Delete This Article", ??_article_path(article) %> # article_path(article)  ?
+</li>
 
