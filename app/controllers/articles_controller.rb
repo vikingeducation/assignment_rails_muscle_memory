@@ -7,9 +7,12 @@ class ArticlesController < ApplicationController
   def create
     a = Article.new(article_params)
     if a.save
-      redirect_to :show
+      redirect_to a
     end
+  end
 
+  def show
+    @article = Article.find(params[:id])
   end
 
   def article_params
