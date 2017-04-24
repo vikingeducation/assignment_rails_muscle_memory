@@ -1,0 +1,9 @@
+
+<%= form_tag("/articles", :method => "post") do %>
+    <%= label_tag(:title, "Title") %> <br>
+    <%= text_field_tag(:title) %> <br>
+    <%= label_tag(:body, "Body") %> <br>
+    <%= text_area(:artilce, :body) %> <br>
+    <%= submit_tag("Submit") %>
+<% end %>
+
