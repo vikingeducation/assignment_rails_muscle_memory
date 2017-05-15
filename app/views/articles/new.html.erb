@@ -1,9 +1,8 @@
-<form>
+<form method="POST" action="articles">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <h1>Title</h1>
-  <input></input>
+  <input type="text" name="article[title]" value="42"></input>
   <h1>Body</h1>
-  <textarea></textarea>
-
-  <button type="submit">Submit Form</button>
+  <textarea type="text" name="article[body]" value="Post for 42">Post for 42</textarea>
+  <input type="submit"></input>
 </form>
