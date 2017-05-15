@@ -1,0 +1,7 @@
+<% @articles.each do |a| %>
+  <%= link_to "Article ID: #{a.id}", article_path(a.id) %>
+  <%= link_to "Title #{a.title}", article_path(a.id) %>
+  <%= link_to "Edit this Article", edit_article_path(a.id) %>
+  <%= link_to "Delete this Article", article_path(a.id), method: "delete" %>
+  <br />
+<% end %>
