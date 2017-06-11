@@ -16,13 +16,19 @@ class ArticlesController < ApplicationController
 
     if @article.save
       redirect_to article_path(@article)
-    else
-
     end
   end
 
   def edit
     @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+
+    if @article.update(whitelisted_article_params)
+      redirect_to article_path(@article)
+    end
   end
 
   private

@@ -1,5 +1,5 @@
 <h1>Edit Article #<%= @article.id %></h1>
-<form method="post" action="<%= edit_article_path(@article.id) %>">
+<form method="post" action="<%= article_path(@article.id) %>">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="patch">
 
