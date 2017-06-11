@@ -31,6 +31,14 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def destroy
+    @article = Article.find(params[:id])
+
+    if @article.destroy
+      redirect_to articles_path
+    end
+  end
+
   private
 
   def whitelisted_article_params
