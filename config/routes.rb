@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   root :to => "articles#new"
 
-  resources :articles, only: [:index, :show, :new, :create]
+  resources :articles, only: [:index, :show, :new, :create, :edit]
 end
