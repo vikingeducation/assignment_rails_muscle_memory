@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
 
-  def index
+  def new
   end
 end
