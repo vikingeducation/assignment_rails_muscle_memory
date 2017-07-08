@@ -5,6 +5,10 @@ class ArticlesController < ApplicationController
   def new
   end
 
+  def index
+    @articles = Article.all
+  end
+
   def create
     @article = Article.new(whitelisted_post_params)
     if @article.save
