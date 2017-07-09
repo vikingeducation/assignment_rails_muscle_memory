@@ -4,3 +4,4 @@
 
 <h2><%= @article.title %></h2>
 <p><%= @article.body %></p>
+<p><%= link_to "Delete Article", article_path(@article), method: "delete" %><p>
