@@ -1,8 +1,8 @@
-<form>
+<form method="post" action="/articles">
   Title:<br>
   <input type="text" name="title"><br>
   Body:<br>
-  <input type="text" name="body"><br>
+  <textarea name="body"></textarea><br>
   <input type="submit" name="submit">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 </form>
