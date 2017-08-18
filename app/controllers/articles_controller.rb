@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
-  
+
   # def index
   #   @articles = Article.all
   # end
@@ -13,5 +13,10 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_parameters)
     @article.save
     redirect_to article_path(@article)
+  end
+
+  def show
+    @article = Article.find(params[:id])
+    
   end
 end
