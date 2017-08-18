@@ -10,4 +10,6 @@
   <p>
   <%= f.submit %>
 <% end %>
+</p>
+<p><%= link_to "Delete this article", article_path(@article), method: :delete, data: {confirm: "Really delete this article?"} %></p>
 <input name="_method" type="hidden" value="patch" />
