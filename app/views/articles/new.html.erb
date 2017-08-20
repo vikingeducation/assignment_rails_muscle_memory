@@ -1,4 +1,5 @@
-<form method="post" action="/articles">
+<h1>Create a New Article</h1>
+<form method="post" action="<%= articles_path(@article) %>">
   Title:<br>
   <input type="text" name="title"><br>
   Body:<br>
