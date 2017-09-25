@@ -70,3 +70,4 @@ group :development do
 end
 
 gem 'slim-rails'
+gem 'semantic-ui-sass'
