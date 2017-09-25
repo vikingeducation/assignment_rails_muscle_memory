@@ -2,3 +2,5 @@ tr
   td = link_to article.id, article
   td = link_to article.title, article
   td = article.body
+  td = link_to "Edit", edit_article_path(article)
+  td = link_to "delete", article, method: :delete
