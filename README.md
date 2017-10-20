@@ -1,4 +1,4 @@
-#  Web Scraper
+#  A very simple RESTful Rails app
 
 This is a very simple Rails app to work muscle memory with Routes, Controllers and Views. This is the main goal - to display of a simple Article resource by performing all 7 of the RESTful actions:
 
