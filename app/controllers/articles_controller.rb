@@ -12,9 +12,11 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(post_params)
     if @article.save
+      flash[:notice] = "Post successfully created"
       redirect_to @article
     else
-      false
+      flash[:alert] = "Post was not created"
+      render :new
     end
   end
 
