@@ -7,11 +7,10 @@ Anne Richardson
 
 ### Complete
 
-- None
+- Request the new article form ("new")
 
 ### Pending
 
-- Request the new article form ("new")
 - Submit the new article form ("create")
 - Read one article ("show")
 - See a listing of all articles ("index")
