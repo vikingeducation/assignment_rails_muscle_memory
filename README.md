@@ -8,10 +8,10 @@ Anne Richardson
 ### Complete
 
 - Request the new article form ("new")
+- Submit the new article form ("create")
 
 ### Pending
 
-- Submit the new article form ("create")
 - Read one article ("show")
 - See a listing of all articles ("index")
 - Request the edit article form ("edit")
