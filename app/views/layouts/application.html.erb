@@ -9,11 +9,7 @@
   </head>
 
   <body>
-    <nav>
-      <%= link_to 'home', root_path %> |
-      <%= link_to 'new article', new_article_path %> |
-      <%= link_to 'articles index', articles_path %>
-    </nav>
+    <%= render partial: 'shared/navbar' %>
     <%= yield %>
   </body>
 </html>

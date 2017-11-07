@@ -10,6 +10,7 @@ Anne Richardson
 - Request the new article form ("new")
 - Submit the new article form ("create")
 - Read one article ("show")
+- Render navbar from a partial
 
 ### Pending
 
