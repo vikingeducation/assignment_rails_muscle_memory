@@ -2,6 +2,6 @@
 
 <ul>
 <% @articles.each do |article| %>
-  <li><%= link_to article.title, article %> (<%= link_to article.id, article %>)  |  <%= link_to 'edit', edit_article_path(article) %></li>
+  <li><%= link_to article.title, article %> (<%= link_to article.id, article %>)  |  <%= link_to 'edit', edit_article_path(article) %> | <%= link_to 'delete', article, method: :delete, data: {confirm: "Really delete the article?"} %></li>
 <% end %>
 </ul>
