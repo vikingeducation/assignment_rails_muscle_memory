@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-  before_action :set_article, only: [:show, :edit]
+  before_action :set_article, only: [:show, :edit, :update]
 
   def new
     @article = Article.new
@@ -28,8 +28,15 @@ class ArticlesController < ApplicationController
   def edit
   end
 
-  # def update
-  # end
+  def update
+    if @article.update(article_params)
+      flash.notice = "Success!"
+      redirect_to @article
+    else
+      flash.now.alert = "Whoopsiedupskies..."
+      render :edit
+    end
+  end
 
   # def destroy
   # end

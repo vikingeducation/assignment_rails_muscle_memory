@@ -13,8 +13,9 @@ Anne Richardson
 - Render navbar from a partial
 - See a listing of all articles ("index")
 - Request the edit article form ("edit")
+- Submit the edited article ("update")
 
 ### Pending
 
-- Submit the edited article ("update")
 - Delete an article ("delete")
+- Complete
