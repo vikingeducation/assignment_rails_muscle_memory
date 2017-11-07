@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+
+  before_action :set_article, only: [:show]
+
   def new
     @article = Article.new
   end
@@ -18,8 +21,8 @@ class ArticlesController < ApplicationController
   # def index
   # end
 
-  # def show
-  # end
+  def show
+  end
 
   # def edit
   # end
@@ -31,7 +34,12 @@ class ArticlesController < ApplicationController
   # end
 
   private
+
   def article_params
     params.require(:article).permit(:title, :body)
+  end
+
+  def set_article
+    @article = Article.find(params[:id])
   end
 end
