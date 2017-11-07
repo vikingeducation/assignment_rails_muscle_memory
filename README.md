@@ -14,8 +14,9 @@ Anne Richardson
 - See a listing of all articles ("index")
 - Request the edit article form ("edit")
 - Submit the edited article ("update")
+- Delete an article ("delete")
 
 ### Pending
 
-- Delete an article ("delete")
+- Generate scaffold
 - Complete
