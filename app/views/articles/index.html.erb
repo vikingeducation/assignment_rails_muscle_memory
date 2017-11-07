@@ -1,0 +1,7 @@
+<h1>Articles Index</h1>
+
+<ul>
+<% @articles.each do |article| %>
+  <li><%= link_to article.title, article %> (<%= link_to article.id, article %>)</li>
+<% end %>
+</ul>

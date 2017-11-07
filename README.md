@@ -11,10 +11,10 @@ Anne Richardson
 - Submit the new article form ("create")
 - Read one article ("show")
 - Render navbar from a partial
+- See a listing of all articles ("index")
 
 ### Pending
 
-- See a listing of all articles ("index")
 - Request the edit article form ("edit")
 - Submit the edited article ("update")
 - Delete an article ("delete")
