@@ -16,8 +16,8 @@ Anne Richardson
 - Submit the edited article ("update")
 - Delete an article ("delete")
 - Generate scaffold
+- Compare my codebase to the scaffold codebase and make improvements as needed
 
 ### Pending
 
-- Compare my codebase to the scaffold codebase and make improvements as needed
 - Complete
