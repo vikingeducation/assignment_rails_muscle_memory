@@ -15,8 +15,9 @@ Anne Richardson
 - Request the edit article form ("edit")
 - Submit the edited article ("update")
 - Delete an article ("delete")
+- Generate scaffold
 
 ### Pending
 
-- Generate scaffold
+- Compare my codebase to the scaffold codebase and make improvements as needed
 - Complete
